@@ -289,12 +289,35 @@ footer {
 }
 
 .contactme {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
     gap: 40px;
     filter: invert(100);
     margin: 1em
 }
+
+
+.email {
+    grid-column: 12;
+}
+
+.linkedin {
+    padding-right: 16px;
+}
+
+.copyright {
+    grid-column: 1/6;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8em;
+}
+
+.icons {
+    justify-self: end;
+}
+
+
+
+
 
 
 
@@ -421,4 +444,24 @@ footer {
         min-width: 510px;
     }
 
+
+
+}
+
+@media screen and (max-width:770px) {
+    .contactme {
+        grid-template-columns: repeat(9,1fr);
+    }
+
+    .email {
+        grid-column: 6;
+    }
+
+    .copyright {
+        grid-column: 1/5;
+    }
+
+    .linkedin {
+        margin-right: 20px;
+    }
 }
